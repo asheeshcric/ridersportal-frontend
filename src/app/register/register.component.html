@@ -2,30 +2,56 @@
 <div class="container">
   <div class="jumbotron">
     <!--Register form-->
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <p class="h5 text-center mb-4">Sign up</p>
-
-      <div class="md-form">
-        <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" id="orangeForm-name" class="form-control" mdbActive>
-        <label for="orangeForm-name">Your name</label>
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input type="text" id="fname" class="form-control" name="fname" [(ngModel)]="fname" mdbActive>
+            <label for="fname">First Name</label>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5">
+          <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input type="text" id="lname" class="form-control" name="lname" [(ngModel)]="lname" mdbActive>
+            <label for="lname">Last Name</label>
+          </div>
+        </div>
       </div>
       <div class="md-form">
         <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="text" id="orangeForm-email" class="form-control" mdbActive>
-        <label for="orangeForm-email">Your email</label>
+        <input type="text" id="email" class="form-control" name="email" [(ngModel)]="email" mdbActive>
+        <label for="email">Email</label>
       </div>
-
       <div class="md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
-        <label for="orangeForm-pass">Your password</label>
+        <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password" mdbActive>
+        <label for="password">Password</label>
       </div>
-
+      <div class="md-form">
+        <i class="fa fa-phone prefix grey-text"></i>
+        <input type="text" id="contact" class="form-control" name="contact" [(ngModel)]="contact" mdbActive>
+        <label for="contact">Contact</label>
+      </div>
+      <div class="md-form">
+        <i class="fa fa-address-card prefix grey-text"></i>
+        <input type="text" id="address" class="form-control" name="address" [(ngModel)]="address" mdbActive>
+        <label for="address">Address</label>
+      </div>
+      <div class="md-form float-center">
+        <h3><b>Own a Bike?</b></h3>
+      </div>
+      <div class="md-form">
+        <i class="fa fa-motorcycle grey-text"></i>
+        <input type="text" id="bike_model" class="form-control" name="bike_model" [(ngModel)]="bike_model" mdbActive>
+        <label for="bike_model">Bike Model</label>
+      </div>
       <div class="text-center">
-        <button class="btn btn-deep-orange waves-light" mdbRippleRadius>Sign up</button>
+        <button type="submit" class="btn btn-deep-orange waves-light" mdbRippleRadius>Sign up</button>
       </div>
-
     </form>
     <!--/Register form-->
   </div>
