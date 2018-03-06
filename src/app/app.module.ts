@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatButtonModule, MatCheckboxModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";
+import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -27,13 +30,24 @@ import { UserComponent } from './user/user.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
   ],
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule
+  ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [AuthenticationService, ApiService, HttpClient],
+  providers: [AuthenticationService, ApiService, HttpClient, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

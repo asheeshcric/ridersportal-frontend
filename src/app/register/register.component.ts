@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   contact: string;
   address: string;
   bike_model: string;
+  picker: string;
   constructor(private http: HttpClient) {
   }
 
