@@ -1,11 +1,26 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo justify-content-between">
-    <logo>
-        <a class="navbar-brand" href="/home">Riders Portal</a>
-    </logo>
-    <links>
-        <div class="waves-light waves-light ml-auto" mdbRippleRadius>
-          <button class="btn btn-outline-warning btn-sm my-0 waves-light" type="button" mdbRippleRadius (click)="register_button()">Register</button>
-          <button class="btn btn-outline-success btn-sm my-0 waves-light" type="button" mdbRippleRadius (click)="login_button()">Login</button>
-        </div>
-    </links>
+  <logo>
+    <a class="navbar-brand" href="/home">Riders Portal</a>
+  </logo>
+  <links>
+    <div class="waves-light ml-auto" mdbRippleRadius [hidden]="auth.isAuthenticated()">
+      <button class="btn btn-outline-warning btn-sm my-0 waves-light" type="button" mdbRippleRadius
+              (click)="register_button()">Register
+      </button>
+      <button class="btn btn-outline-success btn-sm my-0 waves-light" type="button" mdbRippleRadius
+              (click)="login_button()">Login
+      </button>
+    </div>
+    <div class="btn-group ml-auto" dropdown [hidden]="!auth.isAuthenticated()">
+      <img src="http://www.stickpng.com/assets/images/585e4beacb11b227491c3399.png" class="dropdown-toggle"
+           dropdownToggle mdbRippleRadius style="max-width: 50px; max-height: 50px;">
+      <div class="dropdown-menu dropdown-default">
+        <button class="dropdown-item nav-button" href="#">Action</button>
+        <button  class="dropdown-item nav-button" href="#">Another action</button>
+        <button  class="dropdown-item nav-button" href="#">Something else here</button>
+        <div class="divider dropdown-divider"></div>
+        <button  class="dropdown-item nav-button  " (click)="auth.logout()">Logout</button>
+      </div>
+    </div>
+  </links>
 </mdb-navbar>

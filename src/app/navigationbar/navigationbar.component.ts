@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
+import { AuthenticationService } from "../services/authentication.service";
+
 @Component({
   selector: 'app-navigationbar',
   templateUrl: './navigationbar.component.html',
   styleUrls: ['./navigationbar.component.scss']
 })
 export class NavigationbarComponent implements OnInit {
-  constructor(private router: Router ) { }
+
+  constructor(private router: Router, public auth: AuthenticationService) {
+  }
 
   ngOnInit() {
   }
@@ -23,4 +27,6 @@ export class NavigationbarComponent implements OnInit {
     console.log('Login button clicked!');
     this.router.navigateByUrl('/login');
   }
+
+
 }
