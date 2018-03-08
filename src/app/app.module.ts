@@ -4,17 +4,19 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule, MatCheckboxModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";
 import { MatTableModule } from '@angular/material/table';
+import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+
+import {ApiService} from "./services/api.service";
+import {AuthenticationService} from "./services/authentication.service";
+import { AuthGuardService } from "./services/auth-guard.service";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './app-routing.module';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import {AuthenticationService} from "./services/authentication.service";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import {ApiService} from "./services/api.service";
 import { AuthorizedComponent } from './authorized/authorized.component';
 import { UserComponent } from './user/user.component';
 
@@ -47,7 +49,7 @@ import { UserComponent } from './user/user.component';
     MatCheckboxModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [AuthenticationService, ApiService, HttpClient, ],
+  providers: [AuthenticationService, ApiService, AuthGuardService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {environment } from "../../environments/environment";
 import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
+
+import { AuthenticationService } from "../services/authentication.service";
+
 
 @Component({
   selector: 'app-register',
@@ -16,7 +20,7 @@ export class RegisterComponent implements OnInit {
   address: string;
   bike_model: string;
   picker: string;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private auth: AuthenticationService, private router: Router) {
   }
 
   ngOnInit() {
@@ -26,6 +30,13 @@ export class RegisterComponent implements OnInit {
     console.log("Form Submitted!");
     this.register().subscribe(result => {
       console.log(result);
+      if (result['status'] === 200) {
+        this.auth.login(this.email, this.password).subscribe(result => {
+          localStorage.setItem('auth_token', result['token']);
+          localStorage.setItem('user_id', result['user_id']);
+          this.router.navigate(['']);
+        })
+      }
     });
   }
 
