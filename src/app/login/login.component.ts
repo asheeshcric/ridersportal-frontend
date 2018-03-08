@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MatSnackBar } from "@angular/material";
 import {AuthenticationService} from "../services/authentication.service";
 import {Router} from "@angular/router";
 import {log} from "../logger";
@@ -12,9 +13,9 @@ import {log} from "../logger";
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
-  loginFailed = false;
 
-  constructor(private router: Router, private auth: AuthenticationService) { }
+
+  constructor(private router: Router, private auth: AuthenticationService, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -28,8 +29,17 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['']);
     },
     error => {
-      this.loginFailed = true;
-      setTimeout(() => this.loginFailed = false, 4000)
+      log(error);
+      if (error) {
+        log('snack');
+        this.openSnackBar();
+      }
+    });
+  }
+
+  openSnackBar() {
+    this.snackBar.open('Incorrect Email or Password', 'CLOSE', {
+      duration: 4000,
     });
   }
 }

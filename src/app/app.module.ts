@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { MatSnackBarModule } from "@angular/material";
 
 import {ApiService} from "./services/api.service";
 import {AuthenticationService} from "./services/authentication.service";
@@ -43,6 +44,7 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatSnackBarModule
   ],
   exports: [
     MatButtonModule,
