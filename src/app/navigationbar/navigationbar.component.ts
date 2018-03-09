@@ -16,6 +16,11 @@ export class NavigationbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  home_button() {
+    console.log('Home button clicked!');
+    this.router.navigate(['home']);
+  }
+
   register_button() {
     // this.router.navigate(['register']);
     console.log('Register button clicked!');
@@ -26,6 +31,11 @@ export class NavigationbarComponent implements OnInit {
     // this.router.navigate(['login']);
     console.log('Login button clicked!');
     this.router.navigateByUrl('/login');
+  }
+
+  user_button() {
+    console.log('User button clicked!');
+    this.router.navigate(['user']);
   }
 
 
