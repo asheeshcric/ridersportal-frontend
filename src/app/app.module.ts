@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { MatSnackBarModule } from "@angular/material";
+import { MatTabsModule } from "@angular/material";
 
 import {ApiService} from "./services/api.service";
 import {AuthenticationService} from "./services/authentication.service";
@@ -46,7 +47,8 @@ import { BuySectionComponent } from './user/buy-section/buy-section.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule
   ],
   exports: [
     MatButtonModule,
