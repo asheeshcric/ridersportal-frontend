@@ -32,7 +32,10 @@
     <!-- Symbol Column -->
     <ng-container matColumnDef="symbol">
       <mat-header-cell *matHeaderCellDef class="center-text"> <b>PRICE</b> </mat-header-cell>
-      <mat-cell *matCellDef="let element" class="center-text"> {{element.symbol}} </mat-cell>
+      <mat-cell *matCellDef="let element" class="center-text">
+        <h2>$1245.00</h2>
+        <button class="btn btn-success">ADD TO CART</button>
+      </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
