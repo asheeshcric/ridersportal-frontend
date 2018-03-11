@@ -1,3 +1,42 @@
-<p>
-  bikeblog works!
-</p>
+
+<div class="container">
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'" style="background-color: #2196F3;">
+  <!--First slide-->
+  <mdb-slide>
+    <div class="view hm-black-light">
+      <img class="d-block w-100" src="http://media1.santabanta.com/full1/Bikes/Honda%20Bikes/honda-bikes-54a.jpg" alt="First slide">
+      <div class="mask waves-light" mdbRippleRadius></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">Light mask</h3>
+      <p>First text</p>
+    </div>
+  </mdb-slide>
+  <!--/First slide-->
+  <!--Second slide-->
+  <mdb-slide>
+    <div class="view hm-black-strong">
+      <img class="d-block w-100" src="http://3.bp.blogspot.com/-GPHjx2IDt9U/Uex30CGmjJI/AAAAAAAAA7Y/iYxxIs4b-nw/s1600/2008_Kawasaki_ZX-14_27+Kawasaki+Ninja+ZX-14R+Fastest-heavy-bike.jpg" alt="Second slide">
+      <div class="mask waves-light" mdbRippleRadius></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">Strong mask</h3>
+      <p>Secondary text</p>
+    </div>
+  </mdb-slide>
+  <!--/Second slide-->
+  <!--Third slide-->
+  <mdb-slide>
+    <div class="view hm-black-slight">
+      <img class="d-block w-100" src="http://4.bp.blogspot.com/-wehRhLMiJ50/UexzUl2_mxI/AAAAAAAAA6Q/bZ92CBYELnQ/s1600/bmw-K1200-S+bike+Fastest-heavy-bike.jpg" alt="Third slide">
+      <div class="mask waves-light" mdbRippleRadius></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">Slight mask</h3>
+      <p>Third text</p>
+    </div>
+  </mdb-slide>
+  <!--/Third slide-->
+</mdb-carousel>
+</div>

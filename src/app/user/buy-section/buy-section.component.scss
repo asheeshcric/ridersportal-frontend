@@ -29,13 +29,14 @@
 }
 
 .image-product {
-  opacity: 0.8;
+  opacity: 1;
   max-width: 100%;
   max-height: auto;
 }
 
 .image-product:hover {
-  opacity: 1;
+  opacity: 0.8;
+  transform: scale(1.1, 1.1);
 }
 
 .center-text {
