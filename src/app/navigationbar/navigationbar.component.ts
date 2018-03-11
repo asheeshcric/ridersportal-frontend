@@ -38,5 +38,10 @@ export class NavigationbarComponent implements OnInit {
     this.router.navigate(['user']);
   }
 
+  bike_blog_button() {
+    console.log('Bike Blog button clicked!');
+    this.router.navigate(['blog']);
+  }
+
 
 }

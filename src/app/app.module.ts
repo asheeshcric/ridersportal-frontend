@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthorizedComponent } from './authorized/authorized.component';
 import { UserComponent } from './user/user.component';
 import { BuySectionComponent } from './user/buy-section/buy-section.component';
+import { BikeblogComponent } from './bikeblog/bikeblog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BuySectionComponent } from './user/buy-section/buy-section.component';
     LoginComponent,
     AuthorizedComponent,
     UserComponent,
-    BuySectionComponent
+    BuySectionComponent,
+    BikeblogComponent
   ],
   imports: [
     BrowserModule,

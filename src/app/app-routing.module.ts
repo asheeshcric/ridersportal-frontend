@@ -8,13 +8,15 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { AuthorizedComponent } from "./authorized/authorized.component";
 import { UserComponent } from "./user/user.component";
+import { BikeblogComponent } from "./bikeblog/bikeblog.component"
 
 const routes: Routes = [
   { path: '', component: AuthorizedComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'user', component: UserComponent, canActivate: [AuthGuard] }
+  { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
+  { path: 'blog', component: BikeblogComponent }
 ];
 
 @NgModule({

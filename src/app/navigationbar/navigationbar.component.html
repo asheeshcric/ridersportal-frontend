@@ -1,6 +1,7 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo justify-content-between">
   <logo>
       <button mat-button (click)="home_button()" class="register-login-button">Riders Portal</button>
+      <button mat-button (click)="bike_blog_button()" class="register-login-button">Bike Blog</button>
   </logo>
   <links>
     <div class="ml-auto" mdbRippleRadius [hidden]="auth.isAuthenticated()">
