@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthorizedComponent } from './authorized/authorized.component';
 import { UserComponent } from './user/user.component';
+import { BuySectionComponent } from './user/buy-section/buy-section.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UserComponent } from './user/user.component';
     RegisterComponent,
     LoginComponent,
     AuthorizedComponent,
-    UserComponent
+    UserComponent,
+    BuySectionComponent
   ],
   imports: [
     BrowserModule,

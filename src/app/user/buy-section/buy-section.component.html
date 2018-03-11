@@ -1,0 +1,41 @@
+<div class=" mat-elevation-z8">
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef class="center-text"> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a href="http://jashish.com.np" target="_blank">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-48n768dts1ru0aetg9pkg1aa72-20171027122008.Medi.jpeg" class="image-product img-thumbnail">
+        </a>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef class="center-text"> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="center-text"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef class="center-text"> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="center-text"> {{element.weight}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef class="center-text"> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="center-text"> {{element.symbol}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

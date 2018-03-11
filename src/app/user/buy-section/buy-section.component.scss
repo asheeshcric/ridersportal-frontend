@@ -1,0 +1,43 @@
+/* Structure */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: auto;
+}
+
+.table-cell {
+  opacity: 0.7 !important;
+}
+
+.table-cell:hover {
+  opacity: 1 !important;
+}
+
+.image-product {
+  opacity: 0.8;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.image-product:hover {
+  opacity: 1;
+}
+
+.center-text {
+  text-align: center;
+}
